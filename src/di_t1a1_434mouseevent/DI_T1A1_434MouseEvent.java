@@ -40,11 +40,9 @@ public class DI_T1A1_434MouseEvent extends Application {
         //Introducimos evento SetOnMouseDragged, en formato de Lambda
         tText.setOnMouseDragged(e -> {
             //Para coordenada X
-            // tText.setX(tText.getX() + e.getX() - InitX); -> ¿POR QUÉ NO FUNCIONA?
-            tText.layoutXProperty().set(tText.getLayoutX() + e.getX() - InitX);
+            tText.setX(e.getX());
             //Para coordenada Y
-            // tText.setY(tText.getY() + e.getY() - InitY); -> ¿POR QUÉ NO FUNCIONA?
-            tText.layoutYProperty().set(tText.getLayoutY() + e.getY() - InitY);
+            tText.setY(e.getY());
         });
 
         //Añadimos lbText al root
